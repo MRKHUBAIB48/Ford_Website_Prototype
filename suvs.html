@@ -8,131 +8,113 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; }
-        /* Professional fade effect for the header */
-        .glass-nav { background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(10px); }
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .glass-nav { background: rgba(0, 0, 0, 0.8); backdrop-filter: blur(12px); }
+        .text-shadow-strong { text-shadow: 0 4px 20px rgba(0, 0, 0, 0.9); }
+        .hero-zoom { transition: transform 20s ease-out; }
+        .hero-zoom:hover { transform: scale(1.1); }
     </style>
 </head>
-<body class="bg-gray-50 antialiased overflow-x-hidden">
+<body class="bg-slate-50 antialiased overflow-x-hidden">
 
     <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent text-white py-4 px-8">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
             <a href="index.html" class="text-2xl font-black tracking-tighter uppercase cursor-pointer">FORD</a>
             <div class="hidden md:flex space-x-8 font-semibold text-sm">
-                <a href="suvs.html" class="text-blue-400 border-b-2 border-blue-400 pb-1 transition">SUVs</a>
+                <a href="suvs.html" class="text-blue-400 border-b-2 border-blue-400 pb-1">SUVs</a>
                 <a href="index.html#vehicles" class="hover:text-blue-400 transition">Trucks</a>
                 <a href="#" class="hover:text-blue-400 transition">Electric</a>
                 <a href="#" class="hover:text-blue-400 transition">Performance</a>
             </div>
-            <div class="space-x-4">
-                <a href="#" class="hidden md:inline-block font-semibold text-sm hover:text-blue-400 transition">Find a Dealer</a>
-                <a href="#" class="bg-blue-700 hover:bg-blue-600 text-white px-6 py-2 rounded font-bold transition shadow-lg">Build & Price</a>
-            </div>
+            <a href="#" class="bg-blue-700 hover:bg-blue-600 text-white px-6 py-2 rounded-full font-bold transition shadow-lg">Build & Price</a>
         </div>
     </nav>
 
     <header class="relative h-screen flex items-center justify-center text-center overflow-hidden">
-        <div class="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat hero-zoom" style="background-image: url('hero.jpg'); background-color: #111;"></div>
-        <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-gray-50 z-10"></div> 
+        <div class="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat hero-zoom" style="background-image: url('hero.jpg');"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/30 to-slate-50 z-10"></div> 
         
-        <div class="relative z-20 text-white max-w-4xl px-4 fade-in-up mt-16">
-            <p class="text-blue-400 font-bold uppercase tracking-widest text-sm mb-3">Legendary Performance</p>
-            <h1 class="text-6xl md:text-8xl font-black uppercase tracking-tight mb-4 leading-tight shadow-black">The Ford <br>SUV Lineup</h1>
-            <p class="text-lg md:text-2xl text-gray-200 mb-10 max-w-xl mx-auto font-medium">From high-speed thrills to rugged trails, discover the ultimate in Ford capability.</p>
-            <a href="#catalog" class="inline-block bg-white text-black px-10 py-4 rounded-full font-bold text-lg transition hover:bg-blue-600 hover:text-white transform hover:scale-105 shadow-2xl">Explore All Models</a>
+        <div class="relative z-20 text-white max-w-4xl px-4 mt-16">
+            <p class="text-blue-400 font-bold uppercase tracking-widest text-sm mb-3 text-shadow-strong">Precision Engineering</p>
+            <h1 class="text-6xl md:text-8xl font-black uppercase tracking-tight mb-4 leading-tight text-shadow-strong">SUV Excellence</h1>
+            <p class="text-lg md:text-2xl text-gray-100 mb-10 max-w-xl mx-auto font-medium text-shadow-strong">Experience the perfect blend of luxury design and Ford ruggedness.</p>
+            <a href="#catalog" class="inline-block bg-blue-700 text-white px-10 py-4 rounded-full font-bold text-lg transition hover:bg-white hover:text-black transform hover:scale-105 shadow-2xl">View the Collection</a>
         </div>
     </header>
 
     <section id="catalog" class="py-24 px-8 max-w-7xl mx-auto">
-        <div class="mb-16 text-center max-w-2xl mx-auto">
-            <h2 class="text-4xl font-black text-gray-900 uppercase">Find Your Perfect SUV</h2>
-            <p class="text-gray-600 mt-3 text-lg font-medium">Power. Space. Innovation. Choose the SUV that fits your life.</p>
+        <div class="mb-16 text-center">
+            <h2 class="text-4xl font-black text-slate-900 uppercase tracking-tighter">Your Next Adventure Awaits</h2>
+            <div class="w-20 h-1 bg-blue-700 mx-auto mt-4"></div>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
             
-            <div class="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100 transform hover:shadow-2xl transition duration-300 group">
-                <div class="h-64 overflow-hidden relative">
-                    <div class="absolute top-4 left-4 bg-orange-600 text-white text-[10px] font-black px-3 py-1 rounded-full uppercase z-10">Off-Road Icon</div>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/2021_Ford_Bronco_Outer_Banks_in_Cyber_Orange%2C_front_right.jpg/800px-2021_Ford_Bronco_Outer_Banks_in_Cyber_Orange%2C_front_right.jpg" alt="Ford Bronco" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden group border border-slate-100">
+                <div class="h-80 overflow-hidden relative">
+                    <div class="absolute top-4 left-4 bg-orange-600 text-white text-[10px] font-black px-4 py-1.5 rounded-full uppercase z-10 shadow-lg">Wildtrak Ready</div>
+                    <img src="bronco.jpg" alt="Ford Bronco" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
                 </div>
                 <div class="p-8">
-                    <h3 class="text-2xl font-black text-gray-950 mb-1">Bronco®</h3>
-                    <p class="text-gray-500 text-sm mb-6">Starting at $39,130</p>
-                    <div class="flex justify-between text-xs font-bold text-gray-600 py-4 border-t border-gray-50 mb-6">
-                        <span class="flex items-center"><svg class="w-4 h-4 mr-1 text-blue-600" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z"></path></svg>Standard 4x4</span>
-                        <span class="flex items-center"><svg class="w-4 h-4 mr-1 text-blue-600" fill="currentColor" viewBox="0 0 20 20"><path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zm1 2h12V4H4v2zM3 10a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1v-2zm1 2h12v-2H4v2zM3 16a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1v-2zm1 2h12v-2H4v2z"></path></svg>Removable Doors</span>
+                    <h3 class="text-2xl font-black text-slate-900 mb-1">Bronco®</h3>
+                    <p class="text-slate-500 text-sm mb-6">Starting at $39,130</p>
+                    <div class="flex items-center text-xs font-bold text-slate-700 mb-6 bg-slate-50 p-3 rounded-xl justify-between">
+                        <span>4x4 Capability</span>
+                        <span class="text-blue-700">G.O.A.T. Modes™</span>
                     </div>
-                    <a href="#" class="block w-full text-center bg-gray-950 text-white py-4 rounded-xl font-black uppercase tracking-wider text-sm transition hover:bg-blue-700 shadow-lg">View Details</a>
+                    <a href="#" class="block w-full text-center bg-slate-900 text-white py-4 rounded-2xl font-black uppercase tracking-widest text-xs transition hover:bg-blue-700 shadow-md">Build & Price</a>
                 </div>
             </div>
 
-            <div class="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100 transform hover:shadow-2xl transition duration-300 group">
-                <div class="h-64 overflow-hidden relative">
-                    <div class="absolute top-4 left-4 bg-blue-700 text-white text-[10px] font-black px-3 py-1 rounded-full uppercase z-10">Best Seller</div>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/2020_Ford_Explorer_XLT_Front_2.jpg/800px-2020_Explorer_XLT_Front_2.jpg" alt="Ford Explorer" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden group border border-slate-100">
+                <div class="h-80 overflow-hidden relative">
+                    <div class="absolute top-4 left-4 bg-blue-700 text-white text-[10px] font-black px-4 py-1.5 rounded-full uppercase z-10 shadow-lg">Premium Edition</div>
+                    <img src="explorer.jpg" alt="Ford Explorer" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
                 </div>
                 <div class="p-8">
-                    <h3 class="text-2xl font-black text-gray-950 mb-1">Explorer®</h3>
-                    <p class="text-gray-500 text-sm mb-6">Starting at $36,860</p>
-                    <div class="flex justify-between text-xs font-bold text-gray-600 py-4 border-t border-gray-50 mb-6">
-                        <span class="flex items-center"><svg class="w-4 h-4 mr-1 text-blue-600" fill="currentColor" viewBox="0 0 20 20"><path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"></path></svg>Seating for 7</span>
-                        <span class="flex items-center"><svg class="w-4 h-4 mr-1 text-blue-600" fill="currentColor" viewBox="0 0 20 20"><path d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"></path></svg>5,000 lbs Towing</span>
+                    <h3 class="text-2xl font-black text-slate-900 mb-1">Explorer®</h3>
+                    <p class="text-slate-500 text-sm mb-6">Starting at $36,860</p>
+                    <div class="flex items-center text-xs font-bold text-slate-700 mb-6 bg-slate-50 p-3 rounded-xl justify-between">
+                        <span>7 Passengers</span>
+                        <span class="text-blue-700">ST-Line Available</span>
                     </div>
-                    <a href="#" class="block w-full text-center bg-gray-950 text-white py-4 rounded-xl font-black uppercase tracking-wider text-sm transition hover:bg-blue-700 shadow-lg">View Details</a>
+                    <a href="#" class="block w-full text-center bg-slate-900 text-white py-4 rounded-2xl font-black uppercase tracking-widest text-xs transition hover:bg-blue-700 shadow-md">Build & Price</a>
                 </div>
             </div>
 
-            <div class="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100 transform hover:shadow-2xl transition duration-300 group">
-                <div class="h-64 overflow-hidden relative">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/2018_Ford_Expedition_Max_Limited.jpg/800px-Expedition_Max.jpg" alt="Ford Expedition" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden group border border-slate-100">
+                <div class="h-80 overflow-hidden relative">
+                    <div class="absolute top-4 left-4 bg-slate-900 text-white text-[10px] font-black px-4 py-1.5 rounded-full uppercase z-10 shadow-lg">Ultimate Towing</div>
+                    <img src="expedition.jpg" alt="Ford Expedition" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
                 </div>
                 <div class="p-8">
-                    <h3 class="text-2xl font-black text-gray-950 mb-1">Expedition®</h3>
-                    <p class="text-gray-500 text-sm mb-6">Starting at $55,525</p>
-                    <div class="flex justify-between text-xs font-bold text-gray-600 py-4 border-t border-gray-50 mb-6">
-                        <span class="flex items-center"><svg class="w-4 h-4 mr-1 text-blue-600" fill="currentColor" viewBox="0 0 20 20"><path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6.07 17H0v-1a5 5 0 018.5-3.33A6.97 6.97 0 007 16c0 .34.024.673.07 1zM9 16c0 .34.024.673.07 1h5.86a6.915 6.915 0 01.07-1c0-3.866-3.134-7-7-7s-7 3.134-7 7z"></path></svg>Seating for 8</span>
-                        <span class="flex items-center"><svg class="w-4 h-4 mr-1 text-blue-600" fill="currentColor" viewBox="0 0 20 20"><path d="M2 10a8 8 0 018-8v8a8 8 0 11-8 8z"></path></svg>9,300 lbs Towing</span>
+                    <h3 class="text-2xl font-black text-slate-900 mb-1">Expedition®</h3>
+                    <p class="text-slate-500 text-sm mb-4">Starting at $55,525</p>
+                    <div class="flex items-center text-xs font-bold text-slate-700 mb-6 bg-slate-50 p-3 rounded-xl justify-between">
+                        <span>9,300 lbs Tow</span>
+                        <span class="text-blue-700">Heavy Duty</span>
                     </div>
-                    <a href="#" class="block w-full text-center bg-gray-950 text-white py-4 rounded-xl font-black uppercase tracking-wider text-sm transition hover:bg-blue-700 shadow-lg">View Details</a>
+                    <a href="#" class="block w-full text-center bg-slate-900 text-white py-4 rounded-2xl font-black uppercase tracking-widest text-xs transition hover:bg-blue-700 shadow-md">Build & Price</a>
                 </div>
             </div>
 
         </div>
     </section>
 
-    <section class="py-24 px-8 bg-black text-white relative overflow-hidden">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-16 items-center relative z-20">
-            <div class="md:w-1/2 rounded-2xl overflow-hidden shadow-2xl border border-gray-800">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/2020_Ford_Explorer%2C_interior.jpg/1200px-2020_Explorer_interior.jpg" alt="Luxury Interior" class="w-full h-full object-cover transition duration-700 hover:scale-110">
+    <footer class="bg-slate-950 text-white py-16 px-8 border-t border-slate-900">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-sm gap-8">
+            <div class="font-black text-2xl uppercase tracking-tighter">FORD</div>
+            <div class="flex gap-8 font-bold text-slate-400">
+                <a href="index.html" class="hover:text-white transition">Home</a>
+                <a href="suvs.html" class="hover:text-white transition">SUVs</a>
+                <a href="#" class="hover:text-white transition">Contact</a>
             </div>
-            <div class="md:w-1/2">
-                <p class="text-blue-500 font-black uppercase tracking-widest text-sm mb-4">The Interior Experience</p>
-                <h2 class="text-4xl md:text-5xl font-black uppercase tracking-tight mb-6">First Class Technology</h2>
-                <p class="text-gray-400 text-lg mb-8 leading-relaxed font-medium">Step inside a world of intelligence. With SYNC® 4 technology and B&O® Sound Systems, every seat in a Ford SUV is the best seat in the house.</p>
-                <a href="#" class="inline-block border-2 border-white px-10 py-4 rounded-full font-black uppercase tracking-wider text-sm hover:bg-white hover:text-black transition">Learn More</a>
-            </div>
-        </div>
-    </section>
-
-    <footer class="bg-black text-white py-20 px-8 border-t border-gray-900">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 text-sm text-center md:text-left">
-            <div>
-                <h4 class="font-black mb-6 uppercase text-gray-400 tracking-widest">Vehicles</h4>
-                <ul class="space-y-4 font-bold">
-                    <li><a href="suvs.html" class="text-blue-500 underline decoration-2 underline-offset-4">SUVs</a></li>
-                    <li><a href="index.html#vehicles" class="hover:text-blue-500">Trucks</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="font-black mb-6 uppercase text-gray-400 tracking-widest">Ford Motor Co.</h4>
-                <p class="text-gray-500 font-medium">© 2026 Ford Prototype.<br>Designed for Performance.</p>
-            </div>
+            <p class="text-slate-600">© 2026 MRKHUBAIB Ford Prototype.</p>
         </div>
     </footer>
 
     <script>
-        // Smooth scroll and navbar color change
+        // Navbar scroll effect
         const nav = document.getElementById('navbar');
         window.onscroll = function() {
             if (window.scrollY > 100) {
